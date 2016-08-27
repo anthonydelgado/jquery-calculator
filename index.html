@@ -115,6 +115,39 @@ $(document).ready(function(){
 
 
     $('.equal').on('click', function () {
+        
+        if (operator === "plus") {
+
+        	var equals = firstNumber + secondNumber;
+        	console.log(equals);
+        }
+
+        if (operator === "minus") {
+
+        	var equals = firstNumber - secondNumber;
+        	console.log(equals);
+        }
+
+        if (operator === "times") {
+
+        	var equals = firstNumber * secondNumber;
+        	console.log(equals);
+        }
+
+        if (operator === "divide") {
+
+        	var equals = firstNumber / secondNumber;
+        	console.log(equals);
+        }
+
+        if (operator === "power") {
+
+        	var equals = Math.pow(firstNumber, secondNumber);
+        	console.log(equals);
+        }
+
+
+
         /*
          When you click on a playerSelect div
          */
@@ -122,6 +155,8 @@ $(document).ready(function(){
     });
 
 })
+
+
 
 </script>
     
