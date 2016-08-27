@@ -93,11 +93,13 @@ $(document).ready(function(){
         if (operator === null){
 
             firstNumber =  $( this ).attr('value');
+            firstNumber = parseFloat(firstNumber);
             $( "#firstNumber" ).text( firstNumber );
 
         }else{
 
             secondNumber =  $( this ).attr('value');
+            secondNumber = parseFloat(secondNumber);
             $( "#secondNumber" ).text( secondNumber );
 
         }
@@ -112,13 +114,17 @@ $(document).ready(function(){
         operator =  $( this ).attr('value');
         $( "#operator" ).text( operator );
     });
-
+//prints Results into div
+    function printResults(result){
+        $('#result').text(result);
+    };
 
     $('.equal').on('click', function () {
         
         if (operator === "plus") {
 
         	var equals = firstNumber + secondNumber;
+           
         	console.log(equals);
         }
 
@@ -152,6 +158,7 @@ $(document).ready(function(){
          When you click on a playerSelect div
          */
         console.log('you clicked on equals');
+        printResults(equals);
     });
 
 })
