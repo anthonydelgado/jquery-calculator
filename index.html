@@ -112,7 +112,28 @@ $(document).ready(function(){
          */
         console.log('you clicked a operator');
         operator =  $( this ).attr('value');
-        $( "#operator" ).text( operator );
+
+        operatorDiv = $( "#operator" );
+
+        switch(operator) {
+            case 'plus':
+                operatorDiv.text( '+' );
+                break;
+            case 'minus':
+                operatorDiv.text( '-' );
+                break;
+            case 'times':
+                operatorDiv.text( 'x' );
+                break;
+            case 'divide':
+                operatorDiv.text( '/' );
+                break;
+            case 'power':
+                operatorDiv.text( '^' );
+                break;
+            default:
+                operatorDiv.text( operator );
+        }
     });
 //prints Results into div
     function printResults(result){
