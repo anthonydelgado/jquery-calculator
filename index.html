@@ -80,7 +80,46 @@
 $(document).ready(function(){
 
 // Your code here...
+    var firstNumber = null;
+    var operator = null;
+    var secondNumber = null;
 
+
+    $('.number').on('click', function () {
+        /*
+         When you click on a playerSelect div
+         */
+        console.log('you clicked a number');
+        if (operator === null){
+
+            firstNumber =  $( this ).attr('value');
+            $( "#firstNumber" ).text( firstNumber );
+
+        }else{
+
+            secondNumber =  $( this ).attr('value');
+            $( "#secondNumber" ).text( secondNumber );
+
+        }
+    });
+
+
+    $('.operator').on('click', function () {
+        /*
+         When you click on a playerSelect div
+         */
+        console.log('you clicked a operator');
+        operator =  $( this ).attr('value');
+        $( "#operator" ).text( operator );
+    });
+
+
+    $('.equal').on('click', function () {
+        /*
+         When you click on a playerSelect div
+         */
+        console.log('you clicked on equals');
+    });
 
 })
 
